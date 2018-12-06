@@ -8,22 +8,25 @@ $(window).bind("load",function(){
 		$("div.objeto").each((ind,el) =>{
 			var div = $(el);
 			var usuario = div.find("a.usuario");
-			for(var i=0; i<users.length; i++){
-				if(usuario.attr("href").includes(users[i])){
-					div.hide();
-					console.log("Bloqueado por ser mandado por usuario ",users[i]);
-				}
-			}
 			for(var i=0; i<people.length; i++){
 				if(usuario.text().includes(people[i])){
 					div.hide();
 					console.log("Bloqueqado por ser mandado por ",people[i]);
+					return;
+				}
+			}
+			for(var i=0; i<users.length; i++){
+				if(usuario.attr("href").includes(users[i])){
+					div.hide();
+					console.log("Bloqueado por ser mandado por usuario ",users[i]);
+					return;
 				}
 			}
 			for(var i=0; i<keywords.length; i++){
 				if(div.text().toLowerCase().includes(keywords[i])){
 					div.hide();
 					console.log("Bloqueado por contener keyword ",keywords[i]);
+					return;
 				}
 			}
 
