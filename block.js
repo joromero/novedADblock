@@ -3,7 +3,7 @@ $(window).bind("load",function(){
 	var users = ["e490d6e8ba153eff83a496169d4f5d7a"];
 	var people = ["Paula Guerra G."];
 
-	if(window.location.href === "https://www.u-cursos.cl/ingenieria/2/novedades_institucion/"){
+	if(window.location.href.includes("novedades_institucion")){
 		var divs = $("div.objeto");
 		$("div.objeto").each((ind,el) =>{
 			var div = $(el);
