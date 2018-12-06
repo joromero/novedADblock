@@ -1,0 +1,11 @@
+{
+    "name": "NovedADBlock",
+    "version": "0.0.1",
+    "description": "Bloquea novedades no deseadas de u-cursos",
+    "content_scripts": [{
+    	"matches": ["https://www.u-cursos.cl/*"],
+    	"js":["jquery-3.3.1.min.js","block.js"]
+    }],
+    "permissions": ["activeTab", "declarativeContent"],
+    "manifest_version": 2
+  }
