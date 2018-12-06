@@ -6,6 +6,5 @@
     	"matches": ["https://www.u-cursos.cl/*"],
     	"js":["jquery-3.3.1.min.js","block.js"]
     }],
-    "permissions": ["activeTab", "declarativeContent"],
     "manifest_version": 2
   }
